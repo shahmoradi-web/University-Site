@@ -9,7 +9,6 @@ class StudentProfile(models.Model):
     father_name = models.CharField(max_length=100)
     faculty = models.CharField(max_length=100)
     major = models.CharField(max_length=100)
-    department = models.CharField(max_length=100)
     entry_term = models.CharField(max_length=100)
     grade = models.IntegerField()
 
@@ -17,4 +16,3 @@ class StudentProfile(models.Model):
 class TeacherProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     teacher_code = models.IntegerField(unique=True)
-    department = models.CharField(max_length=100)
