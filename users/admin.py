@@ -5,9 +5,7 @@ from .models import *
 @admin.register(StudentProfile)
 class StudentProfileAdmin(admin.ModelAdmin):
     list_display = [
-        'user',
         'student_id',
-        'department',
         'entry_term'
     ]
     search_fields = [
@@ -19,7 +17,6 @@ class StudentProfileAdmin(admin.ModelAdmin):
     list_filter = [
         'faculty',
         'entry_term',
-        'department',
         'grade',
     ]
     ordering = ('student_id',)
@@ -27,17 +24,12 @@ class StudentProfileAdmin(admin.ModelAdmin):
 @admin.register(TeacherProfile)
 class TeacherProfileAdmin(admin.ModelAdmin):
     list_display = [
-        'user',
-        'department',
         'teacher_code'
     ]
     search_fields = [
-        'user__username',
-        'department',
         'teacher_code'
     ]
     list_filter = [
-        'department',
         'teacher_code',
     ]
     ordering = ('teacher_code',)
