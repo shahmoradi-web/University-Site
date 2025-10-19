@@ -1,0 +1,13 @@
+
+
+<h1>ثبت نام دانشجو</h1>
+<p>لطفا اطلاعات خود را وارد کنید:</p>
+
+<form method="post">
+    {% csrf_token %}
+    <h3> اطلاعات حساب کاربری</h3>
+    {{ user_form.as_p }}
+     <h3> اطلاعات دانشجویی</h3>
+    {{ student_form.as_p }}
+    <input type="button">
+</form>
