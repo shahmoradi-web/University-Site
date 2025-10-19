@@ -17,3 +17,4 @@ class Announcement(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
     audience = models.CharField(max_length=100, choices=AUDIENCE_CHOICES, default='all')
+
