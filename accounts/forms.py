@@ -1,9 +1,9 @@
 from django.core.exceptions import ValidationError
 from django.forms import ModelForm
 from .models import *
-from UniversitySite.settings import AUTH_USER_MODEL as User
 from django import forms
 from users.models import StudentProfile
+from accounts.models import CustomUser
 
 
 
@@ -11,8 +11,8 @@ class UserRegisterForm(ModelForm):
     password1 = forms.CharField(label='password',widget=forms.PasswordInput)
     password2 = forms.CharField(label='repeat password',widget=forms.PasswordInput)
     class Meta:
-        model = User
-        fields = ['first_name','last_name','email', 'password1','password2','department']
+        model = CustomUser
+        fields = ['username','first_name','last_name','email','department']
 
     def clean_password2(self):
         cd = self.cleaned_data
@@ -22,7 +22,7 @@ class UserRegisterForm(ModelForm):
 
     def clean_email(self):
         cd = self.cleaned_data
-        if User.objects.filter(email=cd['email']).exists():
+        if CustomUser.objects.filter(email=cd['email']).exists():
             raise ValidationError("Email already registered")
         return cd['email']
 

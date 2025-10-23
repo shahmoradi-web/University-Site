@@ -5,9 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61dd58c8-a63f-4f28-82bd-92ed2af90b61" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/accounts/templates/register/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/announcement/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/courses/migrations/0002_alter_course_teacher_enrollment.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/templates/register/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/register/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/courses/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +51,7 @@
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/hp/Desktop/webapp_social",
+    "last_opened_file_path": "C:/Users/hp/Desktop/drf_api_tracking",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -133,7 +141,11 @@
       <workItem from="1760621439464" duration="522000" />
       <workItem from="1760635857903" duration="4333000" />
       <workItem from="1760777453927" duration="72000" />
-      <workItem from="1760900548183" duration="2739000" />
+      <workItem from="1760900548183" duration="6258000" />
+      <workItem from="1760909091912" duration="1963000" />
+      <workItem from="1761137021354" duration="76000" />
+      <workItem from="1761151643059" duration="6040000" />
+      <workItem from="1761230412610" duration="252000" />
     </task>
     <servers />
   </component>

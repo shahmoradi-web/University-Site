@@ -1,4 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+
+from accounts.forms import StudentRegisterForm, UserRegisterForm
+
 
 # Create your views here.
 
@@ -6,4 +9,28 @@ def home(request):
     pass
 
 def register_users(request):
-    pass
+    if request.method == 'POST':
+        user_form = UserRegisterForm(request.POST)
+        student_form = StudentRegisterForm(request.POST)
+
+        if user_form.is_valid() and student_form.is_valid():
+            user = user_form.save(commit=False)
+            user.user_type = 'student'
+            user.set_password(user_form.cleaned_data['password1'])
+            user.save()
+
+            student = student_form.save(commit=False)
+            student.user = user
+            student.save()
+
+            return redirect('login')
+
+    else:
+        user_form = UserRegisterForm()
+        student_form = StudentRegisterForm()
+
+    return render(
+        request,
+        'register/register.html',
+        {'user_form': user_form, 'student_form': student_form}
+    )

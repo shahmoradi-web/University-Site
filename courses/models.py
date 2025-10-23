@@ -1,13 +1,12 @@
 
-from UniversitySite.settings import AUTH_USER_MODEL as User
 from django.db import models
-
+from accounts.models import CustomUser
 # Create your models here.
 
 
 class Course(models.Model):
     name = models.CharField(max_length=100)
-    teacher = models.ForeignKey(User, on_delete=models.CASCADE)
+    teacher = models.ForeignKey(CustomUser, on_delete=models.CASCADE ,related_name='teacher_courses')
     term = models.CharField(max_length=100)
     credit = models.IntegerField(default=3)
 
@@ -21,8 +20,8 @@ class Enrollment(models.Model):
         ('failed', 'Failed'),
     ]
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    teacher = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='user_enrollments')
+    teacher = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='teacher_enrollments')
     grade = models.FloatField(null=True, blank=True)
     enrolled_at = models.DateTimeField(auto_now_add=True)
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='passed')

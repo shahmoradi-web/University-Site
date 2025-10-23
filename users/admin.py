@@ -1,10 +1,12 @@
 from django.contrib import admin
 from .models import *
+from accounts.models import CustomUser
 # Register your models here.
 
 @admin.register(StudentProfile)
 class StudentProfileAdmin(admin.ModelAdmin):
     list_display = [
+        'user',
         'student_id',
         'entry_term'
     ]
