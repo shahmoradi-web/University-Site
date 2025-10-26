@@ -13,5 +13,5 @@ class StudentProfile(models.Model):
 
 
 class TeacherProfile(models.Model):
-    user = models.OneToOneField(CustomUser, on_delete=models.CASCADE, default=1)
-    teacher_code = models.IntegerField(unique=True)
+    user = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
+    teacher_code = models.IntegerField(unique=True,null=True, blank=True)
