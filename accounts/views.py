@@ -55,3 +55,21 @@ def register_teachers(request):
         user_form = UserRegisterForm()
     return render(request,'register/register.html',{'user_form': user_form,
                                                     'teacher': teacher})
+
+
+def register_admin(request):
+    admin = True
+    if request.method == 'POST':
+        user_form = UserRegisterForm(request.POST)
+        if user_form.is_valid():
+            user = user_form.save(commit=False)
+            user.user_type = 'admin'
+            user.set_password(user_form.cleaned_data['password1'])
+            user.save()
+
+
+            return redirect('login')
+    else:
+        user_form = UserRegisterForm()
+    return render(request,'register/register.html',{'user_form': user_form,
+                                                    'admin': admin})

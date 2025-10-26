@@ -26,6 +26,8 @@ class StudentProfileAdmin(admin.ModelAdmin):
 @admin.register(TeacherProfile)
 class TeacherProfileAdmin(admin.ModelAdmin):
     list_display = [
+        'user__username',
+        'user__department',
         'teacher_code'
     ]
     search_fields = [
