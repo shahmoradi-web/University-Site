@@ -1,5 +1,5 @@
 from Tools.scripts.make_ctype import method
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
 
 from accounts.forms import *
@@ -89,8 +89,16 @@ def login_user(request):
             if user is not None:
                 login(request, user)
                 return redirect('home')
+                # if request.user.user_type == 'student':
+                #     return redirect('panel_students')
+                # elif request.user.user_type == 'teacher':
+                #     return redirect('panel_teachers')
             else:
                 form.add_error(None,'Incorrect username or password.')
     else:
         form = LoginUserForm()
     return render(request,'register/login_user.html',{'form': form})
+
+def logout_user(request):
+    logout(request)
+    return redirect('login')
