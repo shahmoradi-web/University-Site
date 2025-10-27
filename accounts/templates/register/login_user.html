@@ -1,0 +1,10 @@
+<h1>ورود به سایت</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">ورود</button>
+</form>
+
+<a href="{% url 'accounts:register_students' %}">ثبت نام دانشجو</a>
+<a href="{% url 'accounts:register_teachers' %}">ثبت نام استاد</a>

@@ -1,6 +1,8 @@
+from Tools.scripts.make_ctype import method
+from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
 
-from accounts.forms import StudentRegisterForm, UserRegisterForm
+from accounts.forms import *
 
 from users.models import TeacherProfile
 # Create your views here.
@@ -73,3 +75,22 @@ def register_admin(request):
         user_form = UserRegisterForm()
     return render(request,'register/register.html',{'user_form': user_form,
                                                     'admin': admin})
+
+def login_user(request):
+    if request.method == 'POST':
+        form = LoginUserForm(request.POST)
+        if form.is_valid():
+            cleaned_data = form.cleaned_data
+            username = cleaned_data.get('username')
+            password = cleaned_data.get('password')
+
+            user = authenticate(username=username, password=password)
+
+            if user is not None:
+                login(request, user)
+                return redirect('home')
+            else:
+                form.add_error(None,'Incorrect username or password.')
+    else:
+        form = LoginUserForm()
+    return render(request,'register/login_user.html',{'form': form})
