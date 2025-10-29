@@ -5,6 +5,6 @@
     {{ form.as_p }}
     <button type="submit">ورود</button>
 </form>
-
+<a href="{% url 'accounts:password_reset' %}">ایا رمز عبور خود را فراموش کردید؟</a>
 <a href="{% url 'accounts:register_students' %}">ثبت نام دانشجو</a>
 <a href="{% url 'accounts:register_teachers' %}">ثبت نام استاد</a>

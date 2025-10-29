@@ -1,3 +1,5 @@
+from http.client import HTTPResponse
+
 from Tools.scripts.make_ctype import method
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
@@ -26,7 +28,7 @@ def register_students(request):
             student.user = user
             student.save()
 
-            return redirect('login')
+            return redirect('login_user')
 
     else:
         user_form = UserRegisterForm()
@@ -34,7 +36,7 @@ def register_students(request):
 
     return render(
         request,
-        'register/register.html',
+        'registration/register.html',
         {'user_form': user_form,
          'student_form': student_form,
          'student': student}
@@ -52,10 +54,10 @@ def register_teachers(request):
             TeacherProfile.objects.create(user=user)
 
 
-            return redirect('login')
+            return redirect('login_user')
     else:
         user_form = UserRegisterForm()
-    return render(request,'register/register.html',{'user_form': user_form,
+    return render(request, 'registration/register.html', {'user_form': user_form,
                                                     'teacher': teacher})
 
 
@@ -70,10 +72,10 @@ def register_admin(request):
             user.save()
 
 
-            return redirect('login')
+            return redirect('login_user')
     else:
         user_form = UserRegisterForm()
-    return render(request,'register/register.html',{'user_form': user_form,
+    return render(request, 'registration/register.html', {'user_form': user_form,
                                                     'admin': admin})
 
 def login_user(request):
@@ -88,17 +90,14 @@ def login_user(request):
 
             if user is not None:
                 login(request, user)
-                return redirect('home')
-                # if request.user.user_type == 'student':
-                #     return redirect('panel_students')
-                # elif request.user.user_type == 'teacher':
-                #     return redirect('panel_teachers')
+                return redirect('accounts:home')
+
             else:
                 form.add_error(None,'Incorrect username or password.')
     else:
         form = LoginUserForm()
-    return render(request,'register/login_user.html',{'form': form})
+    return render(request,'registration/login_user.html',{'form': form})
 
 def logout_user(request):
     logout(request)
-    return redirect('login')
+    return redirect('login_user')
