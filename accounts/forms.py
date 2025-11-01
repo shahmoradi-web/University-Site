@@ -36,3 +36,8 @@ class StudentRegisterForm(ModelForm):
 class LoginUserForm(forms.Form):
     username = forms.CharField(label='نام کاربری', max_length=150)
     password = forms.CharField(label='رمز عبور', widget=forms.PasswordInput)
+
+class EditStudentProfileForm(forms.ModelForm):
+    class Meta:
+        model = CustomUser
+        fields = ['email']

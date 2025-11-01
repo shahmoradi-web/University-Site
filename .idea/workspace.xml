@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61dd58c8-a63f-4f28-82bd-92ed2af90b61" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/student_portal/templates/dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student_portal/templates/edit_student_profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student_portal/templates/settings.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UniversitySite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/UniversitySite/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/signals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student_portal/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/student_portal/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student_portal/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/student_portal/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -42,7 +49,7 @@
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/hp/Desktop/drf_api_tracking",
+    "last_opened_file_path": "C:/Users/hp/Desktop/webapp_social",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -147,7 +154,8 @@
       <workItem from="1761581640879" duration="5350000" />
       <workItem from="1761675065097" duration="2935000" />
       <workItem from="1761752526727" duration="5996000" />
-      <workItem from="1761816273506" duration="1042000" />
+      <workItem from="1761816273506" duration="7210000" />
+      <workItem from="1761987073705" duration="4185000" />
     </task>
     <servers />
   </component>

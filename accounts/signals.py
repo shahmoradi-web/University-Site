@@ -5,7 +5,8 @@ from random import random
 
 @receiver(pre_save, sender=StudentProfile)
 def set_student_id(sender,instance,**kwargs):
-    instance.student_id = f'{int(str(random)[2:])}{instance.entry_term}'
+    number = f'{int(str(random())[2:5])}{instance.entry_term}'
+    instance.student_id = int(number)
 
 
 @receiver(pre_save, sender=TeacherProfile)
