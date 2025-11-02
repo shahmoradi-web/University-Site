@@ -11,4 +11,5 @@ def set_student_id(sender,instance,**kwargs):
 
 @receiver(pre_save, sender=TeacherProfile)
 def set_teacher_code(sender,instance,**kwargs):
-    instance.teacher_code = f'{int(str(random)[2:])}'
+    number = f'{int(str(random())[2:5])}'
+    instance.teacher_code = int(number)

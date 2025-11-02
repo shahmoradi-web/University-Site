@@ -1,0 +1,12 @@
+
+<h1>ویرایش اطلاعات شخصی</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">ویرایش</button>
+</form>
+
+{% for message in messages %}
+    {{ message }}
+{% endfor %}

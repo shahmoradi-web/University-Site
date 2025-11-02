@@ -41,3 +41,8 @@ class EditStudentProfileForm(forms.ModelForm):
     class Meta:
         model = CustomUser
         fields = ['email']
+
+class EditTeacherProfileForm(forms.ModelForm):
+    class Meta:
+        model = CustomUser
+        fields = ['email']
