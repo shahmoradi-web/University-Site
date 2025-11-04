@@ -89,8 +89,12 @@ def login_user(request):
             user = authenticate(username=username, password=password)
 
             if user is not None:
+
                 login(request, user)
-                return redirect('accounts:home')
+                if user.user_type == 'student':
+                    return redirect('student_portal:dashboard')
+                elif user.user_type == 'teacher':
+                    return redirect('teacher_portal:dashboard')
 
             else:
                 form.add_error(None,'Incorrect username or password.')

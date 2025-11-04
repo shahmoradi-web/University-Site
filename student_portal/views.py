@@ -25,7 +25,7 @@ def dashboard(request):
         'entry_term': user_st.entry_term,
 
     }
-    return render(request, 'dashboard.html', context)
+    return render(request, 'dashboard_student.html', context)
 
 @login_required
 def settings(request):

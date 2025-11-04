@@ -5,7 +5,8 @@ from django.shortcuts import render, redirect
 from accounts.forms import EditTeacherProfileForm
 from accounts.models import CustomUser
 from users.models import TeacherProfile
-
+from courses.forms import CourseCreateForm
+from courses.models import Course
 
 # Create your views here.
 
@@ -19,7 +20,7 @@ def dashboard(request):
         'department': user.department,
         'teacher_code': user_teach.teacher_code,
     }
-    return render(request, 'dashboard.html', context)
+    return render(request, 'dashboard_teacher.html', context)
 
 @login_required
 def settings(request):
@@ -36,3 +37,21 @@ def edit_teacher_profile(request):
     else:
         form = EditTeacherProfileForm(instance=request.user)
     return render(request, 'edit_student_profile.html', {'form': form})
+
+@login_required
+def teacher_add_courses(request):
+    if request.method == 'POST':
+        form = CourseCreateForm(request.POST)
+        if form.is_valid():
+            course = form.save(commit=False)
+            course.teacher = request.user
+            course.save()
+            messages.success(request, 'اطلاعات با موفقیت ثبت شد')
+    else:
+        form = CourseCreateForm()
+    return render(request, 'teacher_add_courses.html', {'form': form})
+
+
+def show_courses(request):
+    courses = Course.objects.filter(teacher=request.user)
+    return render(request,'show_courses_teacher.html',{'courses':courses})
