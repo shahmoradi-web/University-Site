@@ -1,0 +1,9 @@
+{% for course in student.courses.all %}
+
+    {{ course.name }}
+    {{ course.teacher.first_name }}
+    {{ course.teacher.last_name }}
+    {{ course.term }}
+    {{ course.credit }}
+
+{% endfor %}

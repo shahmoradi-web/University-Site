@@ -56,3 +56,7 @@ def student_add_courses(request):
     else:
         form = CourseSelectForm()
     return render(request, 'student_add_courses.html', {'form': form})
+
+def show_student_courses(request):
+    student = StudentProfile.objects.get(user = request.user)
+    return render(request, 'show_student_courses.html', {'student': student})
