@@ -5,16 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61dd58c8-a63f-4f28-82bd-92ed2af90b61" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/courses/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/teacher_portal/templates/show_courses_teacher.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/teacher_portal/templates/teacher_add_courses.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student_portal/templates/student_add_courses.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/migrations/0004_studentprofile_courses_teacherprofile_courses.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student_portal/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/student_portal/templates/dashboard_student.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/courses/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student_portal/templates/dashboard_student.html" beforeDir="false" afterPath="$PROJECT_DIR$/student_portal/templates/dashboard_student.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student_portal/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/student_portal/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/student_portal/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/student_portal/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teacher_portal/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/teacher_portal/templates/dashboard_teacher.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teacher_portal/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/teacher_portal/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teacher_portal/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/teacher_portal/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +158,10 @@
       <workItem from="1761987073705" duration="4575000" />
       <workItem from="1762072871035" duration="2892000" />
       <workItem from="1762273963816" duration="756000" />
-      <workItem from="1762275994133" duration="5327000" />
+      <workItem from="1762275994133" duration="5872000" />
+      <workItem from="1762368193889" duration="6518000" />
+      <workItem from="1762602292843" duration="584000" />
+      <workItem from="1762621618509" duration="2762000" />
     </task>
     <servers />
   </component>

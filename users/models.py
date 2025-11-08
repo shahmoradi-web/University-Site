@@ -1,5 +1,8 @@
 from django.db import models
 from accounts.models import CustomUser
+from courses.models import Course
+
+
 # Create your models here.
 
 class StudentProfile(models.Model):
@@ -10,8 +13,11 @@ class StudentProfile(models.Model):
     major = models.CharField(max_length=100)
     entry_term = models.CharField(max_length=100)
     grade = models.IntegerField(default=0)
+    courses = models.ManyToManyField(Course, null=True, blank=True)
 
 
 class TeacherProfile(models.Model):
     user = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
     teacher_code = models.IntegerField(unique=True,null=True, blank=True)
+    courses = models.ManyToManyField(Course,null=True, blank=True)
+

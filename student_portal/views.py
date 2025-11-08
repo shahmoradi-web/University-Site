@@ -1,10 +1,12 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.shortcuts import render, redirect
+
+from courses.forms import CourseSelectForm
 from users.models import StudentProfile
 from accounts.models import CustomUser
 from announcement.models import Announcement
-from courses.models import Enrollment
+from courses.models import Enrollment, Course
 from accounts.forms import EditStudentProfileForm
 
 # Create your views here.
@@ -43,7 +45,14 @@ def edit_student_profile(request):
         form = EditStudentProfileForm(instance=request.user)
     return render(request, 'edit_student_profile.html', {'form': form})
 
-
-
-
-
+def student_add_courses(request):
+    student = StudentProfile.objects.get(user = request.user)
+    if request.method == 'POST':
+        form = CourseSelectForm(request.POST)
+        if form.is_valid():
+            select_courses = form.cleaned_data['courses']
+            student.courses.add(*select_courses)
+            return redirect('student_portal:dashboard')
+    else:
+        form = CourseSelectForm()
+    return render(request, 'student_add_courses.html', {'form': form})

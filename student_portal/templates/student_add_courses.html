@@ -1,0 +1,10 @@
+
+
+<h2>انتخاب واحد</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">ذخیره انتخاب ها</button>
+</form>
+
