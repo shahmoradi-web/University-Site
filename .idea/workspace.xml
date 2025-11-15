@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61dd58c8-a63f-4f28-82bd-92ed2af90b61" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/student_portal/templates/show_student_courses.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/announcement/migrations/0002_announcement_teacher.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/announcement/migrations/0003_remove_announcement_teacher.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student_portal/templates/show_announcement_student.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/announcement/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/announcement/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/student_portal/templates/dashboard_student.html" beforeDir="false" afterPath="$PROJECT_DIR$/student_portal/templates/dashboard_student.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/student_portal/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/student_portal/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/student_portal/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/student_portal/views.py" afterDir="false" />
@@ -159,7 +162,8 @@
       <workItem from="1762368193889" duration="6518000" />
       <workItem from="1762602292843" duration="584000" />
       <workItem from="1762621618509" duration="3297000" />
-      <workItem from="1762625112750" duration="673000" />
+      <workItem from="1762625112750" duration="809000" />
+      <workItem from="1763220586149" duration="6507000" />
     </task>
     <servers />
   </component>

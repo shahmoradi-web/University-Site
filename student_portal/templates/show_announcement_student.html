@@ -1,0 +1,8 @@
+{% for announcement in announcements %}
+
+    <h2 style="color: steelblue;">{{ announcement.course.name }}</h2>
+    <h3>{{ announcement.title }}</h3>
+    {{ announcement.content }}
+    {{ announcement.created_at }}
+
+{% endfor %}

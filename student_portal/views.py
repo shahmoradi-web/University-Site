@@ -52,6 +52,8 @@ def student_add_courses(request):
         if form.is_valid():
             select_courses = form.cleaned_data['courses']
             student.courses.add(*select_courses)
+            for course in select_courses:
+                Enrollment.objects.create(course = course, user = request.user,teacher = course.teacher)
             return redirect('student_portal:dashboard')
     else:
         form = CourseSelectForm()
@@ -60,3 +62,11 @@ def student_add_courses(request):
 def show_student_courses(request):
     student = StudentProfile.objects.get(user = request.user)
     return render(request, 'show_student_courses.html', {'student': student})
+
+
+def show_announcement(request):
+    course_ids = Enrollment.objects.filter(user=request.user).values_list('course_id', flat=True)
+    announcements = Announcement.objects.filter(course_id__in=course_ids)
+    return render(request,'show_announcement_student.html', {'announcements': announcements})
+
+
