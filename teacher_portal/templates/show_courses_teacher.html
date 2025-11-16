@@ -1,11 +1,12 @@
 
 {% for course in courses %}
 
+    <a href="{% url 'teacher_portal:add_announcement' course_id=course.id %}">ایجاد اعلان</a>
+    <a href="#">نمایش اعلانات</a>
+
     {{ course.name }}
 
-
     {{ course.term }}
-
 
     {{ course.credit }}
 

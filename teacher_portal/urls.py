@@ -8,4 +8,5 @@ urlpatterns =[
     path('edit/teacher_profile/', edit_teacher_profile, name='edit_teacher_profile'),
     path('add_courses/', teacher_add_courses, name='teacher_add_courses'),
     path('show_courses/', show_courses, name='show_courses'),
+    path('add_announcement/<int:course_id>/', add_announcement, name='add_announcement'),
 ]

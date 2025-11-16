@@ -7,6 +7,7 @@ from accounts.models import CustomUser
 from users.models import TeacherProfile
 from courses.forms import CourseCreateForm
 from courses.models import Course
+from announcement.forms import AnnouncementForm
 
 # Create your views here.
 
@@ -55,3 +56,16 @@ def teacher_add_courses(request):
 def show_courses(request):
     courses = Course.objects.filter(teacher=request.user)
     return render(request,'show_courses_teacher.html',{'courses':courses})
+
+
+def add_announcement(request, course_id):
+    course = Course.objects.get(id=course_id)
+    if request.method == 'POST':
+        form = AnnouncementForm(request.POST)
+        if form.is_valid():
+            announcement = form.save(commit=False)
+            announcement.course = course
+            announcement.save()
+    else:
+        form = AnnouncementForm()
+    return render(request,'add_announcement_teacher.html',{'form':form})
