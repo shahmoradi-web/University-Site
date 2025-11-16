@@ -4,6 +4,7 @@ from django.shortcuts import render, redirect
 
 from accounts.forms import EditTeacherProfileForm
 from accounts.models import CustomUser
+from announcement.models import Announcement
 from users.models import TeacherProfile
 from courses.forms import CourseCreateForm
 from courses.models import Course
@@ -69,3 +70,8 @@ def add_announcement(request, course_id):
     else:
         form = AnnouncementForm()
     return render(request,'add_announcement_teacher.html',{'form':form})
+
+
+def show_announcement(request, course_id):
+    announcements = Announcement.objects.filter(course=course_id)
+    return render(request,'show_announcement_teacher.html',{'announcements':announcements})

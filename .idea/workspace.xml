@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61dd58c8-a63f-4f28-82bd-92ed2af90b61" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/announcement/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/teacher_portal/templates/add_announcement_teacher.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/teacher_portal/templates/show_announcement_teacher.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/teacher_portal/templates/show_courses_teacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/teacher_portal/templates/show_courses_teacher.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/teacher_portal/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/teacher_portal/urls.py" afterDir="false" />
@@ -162,7 +161,7 @@
       <workItem from="1762621618509" duration="3297000" />
       <workItem from="1762625112750" duration="809000" />
       <workItem from="1763220586149" duration="6507000" />
-      <workItem from="1763302602879" duration="1491000" />
+      <workItem from="1763302602879" duration="2641000" />
     </task>
     <servers />
   </component>
