@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61dd58c8-a63f-4f28-82bd-92ed2af90b61" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/teacher_portal/templates/show_announcement_teacher.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/serializer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teacher_portal/templates/show_courses_teacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/teacher_portal/templates/show_courses_teacher.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teacher_portal/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/teacher_portal/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teacher_portal/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/teacher_portal/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UniversitySite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/UniversitySite/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UniversitySite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/UniversitySite/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -39,22 +40,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/hp/Desktop/drf_api_tracking&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/hp/Desktop/UniversitySite",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\hp\Desktop\UniversitySite\teacher_portal\templates" />
@@ -161,7 +162,11 @@
       <workItem from="1762621618509" duration="3297000" />
       <workItem from="1762625112750" duration="809000" />
       <workItem from="1763220586149" duration="6507000" />
-      <workItem from="1763302602879" duration="2641000" />
+      <workItem from="1763302602879" duration="2853000" />
+      <workItem from="1763540183258" duration="1518000" />
+      <workItem from="1763799107655" duration="759000" />
+      <workItem from="1763844080693" duration="682000" />
+      <workItem from="1763844802022" duration="2607000" />
     </task>
     <servers />
   </component>

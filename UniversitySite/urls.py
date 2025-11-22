@@ -25,4 +25,5 @@ urlpatterns = [
     path('announcement/', include('announcement.urls'), name='announcement'),
     path('student/',include('student_portal.urls'), name='student'),
     path('teacher/',include('teacher_portal.urls'), name='teacher'),
+    path('api/',include('api.urls'), name='api'),
 ]
