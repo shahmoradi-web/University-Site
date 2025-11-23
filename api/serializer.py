@@ -1,6 +1,7 @@
 from courses.models import Course
 from rest_framework import serializers
 
+from users.models import StudentProfile
 
 
 class CourseSerializer(serializers.ModelSerializer):
@@ -8,3 +9,10 @@ class CourseSerializer(serializers.ModelSerializer):
     class Meta:
         model = Course
         fields = ['id','name','teacher','term','credit']
+
+class StudentSerializer(serializers.ModelSerializer):
+    user = serializers.CharField(source='user.first_name', read_only=True)
+    class Meta:
+        model = StudentProfile
+        fields = ['user','student_id','father_name','faculty',
+                  'major','entry_term','grade','courses']
