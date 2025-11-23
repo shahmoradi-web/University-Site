@@ -7,4 +7,6 @@ urlpatterns =[
     path('courses/<int:pk>',views.CourseDetailAPIView.as_view(),name='course-detail'),
     path('students/',views.StudentListAPIView.as_view(),name='student-list'),
     path('students/<int:pk>',views.StudentDetailAPIView.as_view(),name='student-detail'),
+    path('teachers/',views.TeacherListAPIView.as_view(),name='teacher-list'),
+    path('teachers/<int:pk>',views.TeacherDetailAPIView.as_view(),name='teacher-detail'),
 ]

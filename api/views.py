@@ -1,11 +1,11 @@
 from django.shortcuts import render
 
 import courses
-from api.serializer import CourseSerializer, StudentSerializer
+from api.serializer import CourseSerializer, StudentSerializer, TeacherSerializer
 from courses.models import Course
 from rest_framework import generics
 
-from users.models import StudentProfile
+from users.models import StudentProfile, TeacherProfile
 
 
 # Create your views here.
@@ -26,3 +26,11 @@ class StudentListAPIView(generics.ListAPIView):
 class StudentDetailAPIView(generics.RetrieveAPIView):
     queryset = StudentProfile.objects.all()
     serializer_class = StudentSerializer
+
+class TeacherListAPIView(generics.ListAPIView):
+    queryset = TeacherProfile.objects.all()
+    serializer_class = TeacherSerializer
+
+class TeacherDetailAPIView(generics.RetrieveAPIView):
+    queryset = TeacherProfile.objects.all()
+    serializer_class = TeacherSerializer
