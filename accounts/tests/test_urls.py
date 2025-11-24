@@ -48,17 +48,13 @@ class TestUrls(TestCase):
         self.assertEqual(resolve(url).func.view_class, PasswordResetDoneView)
 
     def test_password_reset_confirm(self):
-        url = reverse('accounts:password_reset_confirm')
-        self.assertEqual(resolve(url).func.view_class, PasswordResetConfirmView)
-
+        uid = 'MQ'
+        token = 'set-password-token'
+        url = reverse('accounts:password_reset_confirm', kwargs={
+            'uidb64': uid,
+            'token': token,
+        })
+        self.assertEqual(url, f'/accounts/password_reset/{uid}/{token}/')
     def test_password_reset_complete(self):
         url = reverse('accounts:password_reset_complete')
         self.assertEqual(resolve(url).func.view_class, PasswordResetCompleteView)
-
-
-
-
-
-
-
-
