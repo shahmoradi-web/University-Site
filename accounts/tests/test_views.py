@@ -182,3 +182,57 @@ class TestRegisterTeachersView(TestCase):
         response = self.client.post(self.url, data)
         self.assertEqual(response.status_code, 200)
         self.assertTrue(response.context['user_form'].errors)
+
+
+class TestLoginUserView(TestCase):
+
+    def setUp(self):
+        self.client = Client()
+        self.url = reverse('accounts:login_user')
+        self.student = CustomUser.objects.create_user(
+            username='student1',
+            password='studentpass',
+            user_type='student'
+        )
+
+        StudentProfile.objects.create(
+            user=self.student
+        )
+
+        self.teacher = CustomUser.objects.create_user(
+            username='teacher1',
+            password='teacherpass',
+            user_type='teacher'
+        )
+
+        TeacherProfile.objects.create(
+            user=self.teacher
+        )
+
+    def test_get_request_renders_form(self):
+        response = self.client.get(self.url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'registration/login_user.html')
+        self.assertIn('form', response.context)
+
+    def test_login_student_redirects_to_student_dashboard(self):
+        response = self.client.post(self.url, data={
+            'username': 'student1',
+            'password': 'studentpass'})
+
+        self.assertRedirects(response, reverse('student_portal:dashboard'))
+
+    def test_login_teacher_redirects_to_teacher_dashboard(self):
+        response = self.client.post(self.url, data={
+            'username': 'teacher1',
+            'password': 'teacherpass'})
+
+        self.assertRedirects(response, reverse('teacher_portal:dashboard'))
+
+    def test_login_with_wrong_credentials_shows_error(self):
+        response = self.client.post(self.url, data={
+            'username': 'wrong',
+            'password': 'wrongpass'})
+
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'Incorrect username or password.')
