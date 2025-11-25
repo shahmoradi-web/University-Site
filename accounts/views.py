@@ -2,6 +2,7 @@ from http.client import HTTPResponse
 
 from Tools.scripts.make_ctype import method
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.password_validation import validate_password
 from django.shortcuts import render, redirect
 
 from accounts.forms import *
@@ -20,15 +21,21 @@ def register_students(request):
 
         if user_form.is_valid() and student_form.is_valid():
             user = user_form.save(commit=False)
-            user.user_type = 'student'
-            user.set_password(user_form.cleaned_data['password1'])
-            user.save()
 
-            student = student_form.save(commit=False)
-            student.user = user
-            student.save()
+            password = user_form.cleaned_data['password1']
+            try:
+                validate_password(password, user)  # validate weak password
+            except ValidationError as e:
+                user_form.add_error('password1', e)
 
-            return redirect('accounts:login_user')
+            if user_form.is_valid():
+                user.user_type = 'student'
+                user.set_password(password)
+                user.save()
+                student = student_form.save(commit=False)
+                student.user = user
+                student.save()
+                return redirect('accounts:login_user')
 
     else:
         user_form = UserRegisterForm()
@@ -44,23 +51,33 @@ def register_students(request):
 
 def register_teachers(request):
     teacher = True
+
     if request.method == 'POST':
         user_form = UserRegisterForm(request.POST)
+
         if user_form.is_valid():
             user = user_form.save(commit=False)
-            user.user_type = 'teacher'
-            user.set_password(user_form.cleaned_data['password1'])
-            user.save()
-            TeacherProfile.objects.create(user=user)
 
+            password = user_form.cleaned_data['password1']
+            try:
+                validate_password(password, user)  # validate weak password
+            except ValidationError as e:
+                user_form.add_error('password1', e)
 
-            return redirect('login_user')
+            if user_form.is_valid():
+                user.user_type = 'teacher'
+                user.set_password(password)
+                user.save()
+                TeacherProfile.objects.create(user=user)
+                return redirect('accounts:login_user')
+
     else:
         user_form = UserRegisterForm()
-    return render(request, 'registration/register.html', {'user_form': user_form,
-                                                    'teacher': teacher})
 
-
+    return render(request, 'registration/register.html', {
+        'user_form': user_form,
+        'teacher': teacher
+    })
 def register_admin(request):
     admin = True
     if request.method == 'POST':
