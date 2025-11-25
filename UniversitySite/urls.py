@@ -19,11 +19,11 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('users/', include('users.urls'), name='users'),
-    path('accounts/', include('accounts.urls'), name='accounts'),
-    path('courses/', include('courses.urls'), name='courses'),
-    path('announcement/', include('announcement.urls'), name='announcement'),
-    path('student/',include('student_portal.urls'), name='student'),
-    path('teacher/',include('teacher_portal.urls'), name='teacher'),
-    path('api/',include('api.urls'), name='api'),
+    path('users/', include(('users.urls', 'users'), namespace='users')),
+    path('accounts/', include(('accounts.urls','accounts'), namespace='accounts')),
+    path('courses/', include(('courses.urls', 'courses'), namespace='courses')),
+    path('announcement/', include(('announcement.urls','announcement'), namespace='announcement')),
+    path('student/',include(('student_portal.urls','student_portal'), namespace='student')),
+    path('teacher/',include(('teacher_portal.urls', 'teacher_portal'), namespace='teacher')),
+    path('api/',include(('api.urls', 'api'), namespace='api')),
 ]

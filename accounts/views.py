@@ -28,7 +28,7 @@ def register_students(request):
             student.user = user
             student.save()
 
-            return redirect('login_user')
+            return redirect('accounts:login_user')
 
     else:
         user_form = UserRegisterForm()
