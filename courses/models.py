@@ -26,4 +26,4 @@ class Enrollment(models.Model):
     enrolled_at = models.DateTimeField(auto_now_add=True)
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='passed')
     def __str__(self):
-        return f'{self.user} - {self.course} - {self.grade}'
+        return f'{self.user.username} - {self.course} - {self.grade}'
