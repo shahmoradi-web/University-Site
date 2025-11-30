@@ -40,11 +40,12 @@ def edit_student_profile(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'پروفایل به روزرسانی شد',)
-            redirect('student_portal:dashboard')
+            return redirect('student_portal:dashboard')
     else:
         form = EditStudentProfileForm(instance=request.user)
     return render(request, 'edit_student_profile.html', {'form': form})
 
+@login_required
 def student_add_courses(request):
     student = StudentProfile.objects.get(user = request.user)
     if request.method == 'POST':
@@ -59,11 +60,12 @@ def student_add_courses(request):
         form = CourseSelectForm()
     return render(request, 'student_add_courses.html', {'form': form})
 
+@login_required
 def show_student_courses(request):
     student = StudentProfile.objects.get(user = request.user)
     return render(request, 'show_student_courses.html', {'student': student})
 
-
+@login_required
 def show_announcement(request):
     course_ids = Enrollment.objects.filter(user=request.user).values_list('course_id', flat=True)
     announcements = Announcement.objects.filter(course_id__in=course_ids)
