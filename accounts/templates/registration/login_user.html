@@ -1,10 +1,19 @@
-<h1>ورود به سایت</h1>
+{% extends 'parent/base.html' %}
+{% load static %}
+{% block title %} Login page{% endblock %}
 
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">ورود</button>
-</form>
-<a href="{% url 'accounts:password_reset' %}">ایا رمز عبور خود را فراموش کردید؟</a>
-<a href="{% url 'accounts:register_students' %}">ثبت نام دانشجو</a>
-<a href="{% url 'accounts:register_teachers' %}">ثبت نام استاد</a>
+{% block content %}
+
+
+    <h1>ورود به سایت</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">ورود</button>
+    </form>
+    <a href="{% url 'accounts:password_reset' %}">ایا رمز عبور خود را فراموش کردید؟</a>
+    <a href="{% url 'accounts:register_students' %}">ثبت نام دانشجو</a>
+    <a href="{% url 'accounts:register_teachers' %}">ثبت نام استاد</a>
+
+{% endblock %}
