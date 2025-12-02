@@ -5,13 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61dd58c8-a63f-4f28-82bd-92ed2af90b61" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/static/css/css.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/parent/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/partials/footer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/partials/header.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/partials/navigation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/static/css/change_password.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/static/css/login_user.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/static/css/password_change_done.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/static/css/password_reset_confirm.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/static/css/password_reset_done.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/static/css/password_reset_form.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/static/css/register.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UniversitySite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/UniversitySite/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/templates/registration/login_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/registration/login_user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/templates/registration/password_change_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/registration/password_change_done.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/templates/registration/password_change_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/registration/password_change_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/templates/registration/password_reset_complete.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/registration/password_reset_complete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/templates/registration/password_reset_confirm.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/registration/password_reset_confirm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/templates/registration/password_reset_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/registration/password_reset_done.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/templates/registration/password_reset_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/registration/password_reset_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/templates/registration/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/registration/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +34,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
-        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -50,7 +59,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "django.template.preview.state": "SHOW_EDITOR_AND_PREVIEW",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/hp/Desktop/webapp",
+    "last_opened_file_path": "C:/Users/hp/Desktop/UniversitySite",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -229,7 +238,8 @@
       <workItem from="1764160824595" duration="760000" />
       <workItem from="1764230421634" duration="6374000" />
       <workItem from="1764512514300" duration="10621000" />
-      <workItem from="1764526884371" duration="3752000" />
+      <workItem from="1764526884371" duration="4481000" />
+      <workItem from="1764694205822" duration="4710000" />
     </task>
     <servers />
   </component>
