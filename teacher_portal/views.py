@@ -1,6 +1,6 @@
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 
 from accounts.forms import EditTeacherProfileForm
 from accounts.models import CustomUser
@@ -35,32 +35,34 @@ def edit_teacher_profile(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'پروفایل به روزرسانی شد',)
-            redirect('student_portal:dashboard')
+            return redirect('teacher_portal:dashboard')
     else:
         form = EditTeacherProfileForm(instance=request.user)
     return render(request, 'edit_student_profile.html', {'form': form})
 
 @login_required
 def teacher_add_courses(request):
+    teacher = TeacherProfile.objects.get(user=request.user)
     if request.method == 'POST':
         form = CourseCreateForm(request.POST)
         if form.is_valid():
             course = form.save(commit=False)
             course.teacher = request.user
             course.save()
+            teacher.courses.add(course)
             messages.success(request, 'اطلاعات با موفقیت ثبت شد')
     else:
         form = CourseCreateForm()
     return render(request, 'teacher_add_courses.html', {'form': form})
 
-
+@login_required
 def show_courses(request):
     courses = Course.objects.filter(teacher=request.user)
     return render(request,'show_courses_teacher.html',{'courses':courses})
 
-
+@login_required
 def add_announcement(request, course_id):
-    course = Course.objects.get(id=course_id)
+    course = get_object_or_404(Course, id=course_id)
     if request.method == 'POST':
         form = AnnouncementForm(request.POST)
         if form.is_valid():
@@ -71,7 +73,7 @@ def add_announcement(request, course_id):
         form = AnnouncementForm()
     return render(request,'add_announcement_teacher.html',{'form':form})
 
-
+@login_required
 def show_announcement(request, course_id):
     announcements = Announcement.objects.filter(course=course_id)
     return render(request,'show_announcement_teacher.html',{'announcements':announcements})

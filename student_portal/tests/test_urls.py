@@ -4,7 +4,7 @@ from django.urls import reverse,resolve
 from student_portal.views import *
 
 
-class TestDashboardUrls(TestCase):
+class TestUrls(TestCase):
 
     def test_dashboard_urls(self):
         url = reverse('student_portal:dashboard')

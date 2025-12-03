@@ -1,12 +1,10 @@
-from http.client import responses
 
 from django.test import TestCase,Client
 from django.urls import reverse
-
 from accounts.models import CustomUser
 from courses.forms import CourseSelectForm
-from courses.models import Course, Enrollment
-from users.models import StudentProfile, TeacherProfile
+from courses.models import Course
+from users.models import StudentProfile
 
 
 
