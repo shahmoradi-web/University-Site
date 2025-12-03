@@ -1,0 +1,58 @@
+:root {
+    --blue: #3A6DFF;
+    --purple: #8e44ad;
+    --gray: #f4f6f9;
+    --white: #ffffff;
+    --text-dark: #333;
+}
+
+/* کانتینر اصلی */
+.announcements-container {
+    direction: rtl;
+    width: 70%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* کارت هر اعلان */
+.announcement-card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    border-right: 5px solid var(--purple);
+}
+
+.announcement-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+/* نام درس */
+.course-name {
+    color: var(--blue);
+    margin-bottom: 8px;
+}
+
+/* عنوان اعلان */
+.announcement-title {
+    color: var(--purple);
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/* متن */
+.announcement-content {
+    color: var(--text-dark);
+    line-height: 1.9;
+    margin-bottom: 15px;
+}
+
+/* تاریخ */
+.announcement-date {
+    font-size: 14px;
+    color: #777;
+}

@@ -5,22 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61dd58c8-a63f-4f28-82bd-92ed2af90b61" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/accounts/static/css/change_password.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/static/css/login_user.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/static/css/password_change_done.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/static/css/password_reset_confirm.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/static/css/password_reset_done.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/static/css/password_reset_form.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/static/css/register.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student_portal/static/edit_student_profile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student_portal/static/settings.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student_portal/static/show_announcement_student.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student_portal/static/show_student_courses.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student_portal/static/student_add_courses.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/student_portal/static/student_dashboard.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/templates/registration/login_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/registration/login_user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/templates/registration/password_change_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/registration/password_change_done.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/templates/registration/password_change_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/registration/password_change_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/templates/registration/password_reset_complete.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/registration/password_reset_complete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/templates/registration/password_reset_confirm.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/registration/password_reset_confirm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/templates/registration/password_reset_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/registration/password_reset_done.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/templates/registration/password_reset_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/registration/password_reset_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/templates/registration/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/registration/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student_portal/templates/dashboard_student.html" beforeDir="false" afterPath="$PROJECT_DIR$/student_portal/templates/dashboard_student.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student_portal/templates/edit_student_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/student_portal/templates/edit_student_profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student_portal/templates/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/student_portal/templates/settings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student_portal/templates/show_announcement_student.html" beforeDir="false" afterPath="$PROJECT_DIR$/student_portal/templates/show_announcement_student.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student_portal/templates/show_student_courses.html" beforeDir="false" afterPath="$PROJECT_DIR$/student_portal/templates/show_student_courses.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student_portal/templates/student_add_courses.html" beforeDir="false" afterPath="$PROJECT_DIR$/student_portal/templates/student_add_courses.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,25 +48,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Django tests.Test: .executor": "Run",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "django.template.preview.state": "SHOW_EDITOR_AND_PREVIEW",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/hp/Desktop/UniversitySite",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django tests.Test: .executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR_AND_PREVIEW&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/hp/Desktop/UniversitySite&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\hp\Desktop\UniversitySite\teacher_portal\templates" />
@@ -239,7 +236,10 @@
       <workItem from="1764230421634" duration="6374000" />
       <workItem from="1764512514300" duration="10621000" />
       <workItem from="1764526884371" duration="4481000" />
-      <workItem from="1764694205822" duration="4710000" />
+      <workItem from="1764694205822" duration="6067000" />
+      <workItem from="1764752645580" duration="496000" />
+      <workItem from="1764756934766" duration="139000" />
+      <workItem from="1764757095641" duration="3232000" />
     </task>
     <servers />
   </component>

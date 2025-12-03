@@ -1,11 +1,28 @@
-<h1>ویرایش اطلاعات شخصی</h1>
+{% extends 'parent/base.html' %}
+{% load static %}
+{% block title %} student dashboard{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'edit_student_profile.css' %}">
+{% endblock head %}
 
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">ویرایش</button>
-</form>
+{% block content %}
 
-{% for message in messages %}
-    {{ message }}
-{% endfor %}
+<div class="edit-container">
+    <h1 class="title">ویرایش اطلاعات شخصی</h1>
+
+    <form method="post" class="edit-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="submit-btn">ویرایش</button>
+    </form>
+
+    {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+                <p>{{ message }}</p>
+            {% endfor %}
+        </div>
+    {% endif %}
+</div>
+
+{% endblock content %}

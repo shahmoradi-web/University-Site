@@ -1,8 +1,31 @@
-{% for announcement in announcements %}
+{% extends 'parent/base.html' %}
+{% load static %}
+{% block title %} student dashboard{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'show_announcement_student.css' %}">
+{% endblock head %}
 
-    <h2 style="color: steelblue;">{{ announcement.course.name }}</h2>
-    <h3>{{ announcement.title }}</h3>
-    {{ announcement.content }}
-    {{ announcement.created_at }}
+{% block content %}
 
-{% endfor %}
+
+<div class="announcements-container">
+
+    {% for announcement in announcements %}
+        <div class="announcement-card">
+            <h2 class="course-name">{{ announcement.course.name }}</h2>
+            <h3 class="announcement-title">{{ announcement.title }}</h3>
+
+            <p class="announcement-content">
+                {{ announcement.content }}
+            </p>
+
+            <span class="announcement-date">
+                {{ announcement.created_at }}
+            </span>
+        </div>
+    {% endfor %}
+
+</div>
+
+
+{% endblock content %}

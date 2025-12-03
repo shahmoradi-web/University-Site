@@ -1,9 +1,34 @@
-{% for course in student.courses.all %}
+{% extends 'parent/base.html' %}
+{% load static %}
+{% block title %} show student courses {% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'show_student_courses.css' %}">
+{% endblock head %}
 
-    {{ course.name }}
-    {{ course.teacher.first_name }}
-    {{ course.teacher.last_name }}
-    {{ course.term }}
-    {{ course.credit }}
+{% block content %}
 
-{% endfor %}
+<h1 class="title">دروس انتخاب شده</h1>
+
+<div class="courses-container">
+    {% for course in student.courses.all %}
+        <div class="course-card">
+            <h2 class="course-name">{{ course.name }}</h2>
+
+            <p class="course-info">
+                استاد: {{ course.teacher.first_name }} {{ course.teacher.last_name }}
+            </p>
+
+            <p class="course-info">
+                ترم: {{ course.term }}
+            </p>
+
+            <p class="course-info">
+                تعداد واحد: {{ course.credit }}
+            </p>
+        </div>
+    {% empty %}
+        <p class="no-courses">هیچ درسی انتخاب نشده است.</p>
+    {% endfor %}
+</div>
+
+{% endblock content %}

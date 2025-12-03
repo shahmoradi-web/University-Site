@@ -1,10 +1,47 @@
+{% extends 'parent/base.html' %}
+{% load static %}
+{% block title %} انتخاب واحد {% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'student_add_courses.css' %}">
+{% endblock head %}
+
+{% block content %}
+
+<div class="course-select-container">
+    <h2 class="title">انتخاب واحد</h2>
+
+    <form method="post" class="course-form">
+        {% csrf_token %}
+
+        <table class="course-table">
+            <thead>
+                <tr>
+                    <th>انتخاب</th>
+                    <th>نام درس</th>
+                    <th>استاد</th>
+                    <th>ترم</th>
+                    <th>واحد</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for course in form.courses.field.queryset %}
+                <tr>
+                    <td>
+                        <input type="checkbox" name="courses" value="{{ course.id }}" id="course_{{ course.id }}">
+                    </td>
+                    <td><label for="course_{{ course.id }}">{{ course.name }}</label></td>
+                    <td>{{ course.teacher.first_name }} {{ course.teacher.last_name }}</td>
+                    <td>{{ course.term }}</td>
+                    <td>{{ course.credit }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <button type="submit" class="submit-btn">ذخیره انتخاب‌ها</button>
+    </form>
+</div>
 
 
-<h2>انتخاب واحد</h2>
 
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">ذخیره انتخاب ها</button>
-</form>
-
+{% endblock content %}

@@ -1,18 +1,48 @@
-<h1>نمایش اطلاعات دانشجو</h1>
+{% extends 'parent/base.html' %}
+{% load static %}
+{% block title %} student dashboard{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'student_dashboard.css' %}">
+{% endblock head %}
 
-<p>{{ first_name }}</p>
-<p>{{ last_name }}</p>
-<p>{{ department }}</p>
-<p>{{ father_name }}</p>
-<p>{{ student_id }}</p>
-<p>{{ faculty }}</p>
-<p>{{ major }}</p>
-<p>{{ entry_term }}</p>
+{% block content %}
 
-<a href="{% url 'student_portal:show_announcement' %}">نمایش اعلانات</a>
-<br>
-<a href="{% url 'student_portal:settings' %}">ویرایش اطلاعات شخصی</a>
-<br>
-<a href="{% url 'student_portal:student_add_courses' %}">انتخاب واحد</a>
-<br>
-<a href="{% url 'student_portal:show_student_courses' %}">نمایش دروس انتخاب شده ترم جاری</a>
+<div class="dashboard-container">
+
+    <h1 class="title">داشبورد دانشجو</h1>
+
+    <div class="student-info card">
+        <h3>اطلاعات دانشجو</h3>
+        <p><strong>نام:</strong> {{ first_name }}</p>
+        <p><strong>نام خانوادگی:</strong> {{ last_name }}</p>
+        <p><strong>دپارتمان:</strong> {{ department }}</p>
+        <p><strong>نام پدر:</strong> {{ father_name }}</p>
+        <p><strong>شماره دانشجویی:</strong> {{ student_id }}</p>
+        <p><strong>دانشکده:</strong> {{ faculty }}</p>
+        <p><strong>رشته:</strong> {{ major }}</p>
+        <p><strong>ترم ورود:</strong> {{ entry_term }}</p>
+    </div>
+
+    <div class="dashboard-links card">
+        <h3>دسترسی سریع</h3>
+
+        <a class="dash-link" href="{% url 'student_portal:show_announcement' %}">
+            نمایش اعلانات
+        </a>
+
+        <a class="dash-link" href="{% url 'student_portal:settings' %}">
+            ویرایش اطلاعات شخصی
+        </a>
+
+        <a class="dash-link" href="{% url 'student_portal:student_add_courses' %}">
+            انتخاب واحد
+        </a>
+
+        <a class="dash-link" href="{% url 'student_portal:show_student_courses' %}">
+            دروس انتخاب شده ترم جاری
+        </a>
+    </div>
+
+</div>
+
+{% endblock content %}

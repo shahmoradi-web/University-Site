@@ -1,6 +1,22 @@
+{% extends 'parent/base.html' %}
+{% load static %}
+{% block title %} settings{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'settings.css' %}">
+{% endblock head %}
 
+{% block content %}
 
+<div class="settings-container">
+    <h1 class="title">تنظیمات</h1>
 
-<a href="{% url 'accounts:password_change' %}">تغییر رمز عبور</a>
-<br>
-<a href="{% url 'student_portal:edit_student_profile' %}">ویرایش اطلاعات شخصی</a>
+    <div class="settings-box">
+        <a href="{% url 'accounts:password_change' %}" class="setting-item purple">تغییر رمز عبور</a>
+
+        <a href="{% url 'student_portal:edit_student_profile' %}" class="setting-item purple">
+            ویرایش اطلاعات شخصی
+        </a>
+    </div>
+</div>
+
+{% endblock content %}

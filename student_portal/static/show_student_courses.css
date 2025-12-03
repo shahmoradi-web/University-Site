@@ -1,0 +1,65 @@
+:root {
+    --blue: #3A6DFF;
+    --purple: #8e44ad;
+    --gray: #f5f6fa;
+    --white: #fff;
+    --text: #333;
+}
+
+body {
+    direction: rtl;
+}
+
+/* عنوان صفحه */
+.title {
+    text-align: center;
+    margin-top: 20px;
+    color: var(--purple);
+    font-size: 28px;
+}
+
+/* کانتینر کارت‌ها */
+.courses-container {
+    width: 70%;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* کارت درس */
+.course-card {
+    background: var(--white);
+    padding: 20px 25px;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    border-right: 5px solid var(--blue);
+    transition: 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+/* نام درس */
+.course-name {
+    color: var(--blue);
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+/* اطلاعات */
+.course-info {
+    color: var(--text);
+    margin: 6px 0;
+    font-size: 16px;
+}
+
+/* در صورت نبود درس */
+.no-courses {
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+    margin-top: 30px;
+}
