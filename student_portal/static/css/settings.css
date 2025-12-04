@@ -7,7 +7,7 @@
     --text-dark: #333;
 }
 
-/* کانتینر اصلی */
+
 .settings-container {
     background: var(--white);
     padding: 30px 40px;
@@ -18,7 +18,7 @@
     direction: rtl;
 }
 
-/* عنوان */
+
 .title {
     text-align: center;
     font-size: 26px;
@@ -26,14 +26,14 @@
     color: var(--purple);
 }
 
-/* باکس اصلی تنظیمات */
+
 .settings-box {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-/* استایل کارت‌های تنظیمات */
+
 .setting-item {
     display: block;
     padding: 15px;
@@ -47,7 +47,7 @@
     transition: 0.3s;
 }
 
-/* رنگ‌های مختلف کارت‌ها */
+
 .blue {
     background: var(--blue);
 }

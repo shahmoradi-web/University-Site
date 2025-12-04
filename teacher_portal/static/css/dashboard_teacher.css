@@ -16,7 +16,7 @@
     direction: rtl;
 }
 
-/* عنوان */
+
 .dashboard-title {
     font-size: 28px;
     color: var(--purple);
@@ -25,7 +25,7 @@
     font-weight: bold;
 }
 
-/* باکس اطلاعات استاد */
+
 .info-box {
     background: var(--gray);
     border-radius: 12px;
@@ -40,7 +40,6 @@
     color: var(--blue);
 }
 
-/* لینک‌ها (مثل داشبورد) */
 .dashboard-links {
     display: flex;
     flex-direction: column;

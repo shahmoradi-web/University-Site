@@ -6,7 +6,7 @@
     --text: #333;
 }
 
-/* کانتینر اصلی */
+
 .form-container {
     width: 90%;
     max-width: 650px;
@@ -18,7 +18,7 @@
     direction: rtl;
 }
 
-/* عنوان صفحه */
+
 .form-title {
     text-align: center;
     color: var(--purple);
@@ -27,12 +27,11 @@
     font-weight: bold;
 }
 
-/* استایل فرم */
+
 .announcement-form p {
     margin-bottom: 20px;
 }
 
-/* لیبل‌ها */
 .announcement-form label {
     display: block;
     font-size: 15px;
@@ -41,7 +40,7 @@
     margin-bottom: 6px;
 }
 
-/* اینپوت‌ها – همه شامل تکست‌باکس، سلکت و textarea */
+
 .announcement-form input[type="text"],
 .announcement-form input[type="number"],
 .announcement-form textarea,
@@ -63,7 +62,7 @@
     outline: none;
 }
 
-/* دکمه ارسال */
+
 .submit-btn {
     width: 100%;
     padding: 14px;
