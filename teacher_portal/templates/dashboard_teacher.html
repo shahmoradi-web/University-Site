@@ -1,14 +1,31 @@
-<h1>نمایش اطلاعات استاد</h1>
+{% extends 'parent/base.html' %}
+{% load static %}
+{% block title %} teacher dashboard{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/dashboard_teacher.css' %}">
+{% endblock head %}
 
-<p>{{ first_name }}</p>
-<p>{{ last_name }}</p>
-<p>{{ department }}</p>
-<p>{{ teacher_code }}</p>
+{% block content %}
 
-<a href="#">نمایش اعلانات</a>
-<br>
-<a href="{% url 'teacher_portal:settings' %}">ویرایش اطلاعات شخصی</a>
-<br>
-<a href="{% url 'teacher_portal:teacher_add_courses' %}">ارائه درس</a>
-<br>
-<a href="{% url 'teacher_portal:show_courses' %}">مشاهده دروس ارائه شده</a>
+<div class="dashboard-container">
+
+    <h1 class="dashboard-title">نمایش اطلاعات استاد</h1>
+
+    <div class="info-box">
+        <p><strong>نام:</strong> {{ first_name }}</p>
+        <p><strong>نام خانوادگی:</strong> {{ last_name }}</p>
+        <p><strong>دپارتمان:</strong> {{ department }}</p>
+        <p><strong>کد استاد:</strong> {{ teacher_code }}</p>
+    </div>
+
+    <div class="dashboard-links">
+
+        <a href="{% url 'teacher_portal:settings' %}" class="dash-link">ویرایش اطلاعات شخصی</a>
+        <a href="{% url 'teacher_portal:teacher_add_courses' %}" class="dash-link">ارائه درس</a>
+        <a href="{% url 'teacher_portal:show_courses' %}" class="dash-link">مشاهده دروس ارائه شده</a>
+
+    </div>
+
+</div>
+
+{% endblock content %}

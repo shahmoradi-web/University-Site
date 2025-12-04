@@ -1,14 +1,35 @@
+{% extends 'parent/base.html' %}
+{% load static %}
+{% block title %} show courses teacher {% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/show_courses_teacher.css' %}">
+{% endblock head %}
 
-{% for course in courses %}
+{% block content %}
+<div class="courses-container">
+    <h1 class="courses-title">دروس ارائه شده</h1>
 
-    <a href="{% url 'teacher_portal:add_announcement' course_id=course.id %}">ایجاد اعلان</a>
-    <a href="{% url 'teacher_portal:show_announcement' course_id=course.id %}">نمایش اعلانات</a>
-
-    {{ course.name }}
-
-    {{ course.term }}
-
-    {{ course.credit }}
-
-{% endfor %}
-
+    <table class="courses-table">
+        <thead>
+            <tr>
+                <th>نام درس</th>
+                <th>ترم</th>
+                <th>واحد</th>
+                <th>ایجاد اعلان</th>
+                <th>نمایش اعلانات</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for course in courses %}
+            <tr>
+                <td>{{ course.name }}</td>
+                <td>{{ course.term }}</td>
+                <td>{{ course.credit }}</td>
+                <td><a href="{% url 'teacher_portal:add_announcement' course_id=course.id %}">ایجاد اعلان</a></td>
+                <td><a href="{% url 'teacher_portal:show_announcement' course_id=course.id %}">نمایش اعلانات</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock content %}

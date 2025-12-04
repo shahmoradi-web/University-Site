@@ -1,12 +1,23 @@
+{% extends 'parent/base.html' %}
+{% load static %}
+{% block title %} edit_teacher_profile {% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/edit_teacher_profile.css' %}">
+{% endblock head %}
 
-<h1>ویرایش اطلاعات شخصی</h1>
+{% block content %}
+<h1 class="page-title">ویرایش اطلاعات شخصی</h1>
 
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">ویرایش</button>
-</form>
+<div class="edit-box">
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="submit-btn">ویرایش</button>
+    </form>
 
-{% for message in messages %}
-    {{ message }}
-{% endfor %}
+    {% for message in messages %}
+        <div class="message">{{ message }}</div>
+    {% endfor %}
+</div>
+
+{% endblock content %}

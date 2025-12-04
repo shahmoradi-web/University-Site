@@ -1,8 +1,21 @@
+{% extends 'parent/base.html' %}
+{% load static %}
+{% block title %} add announcement teacher {% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/add_announcement_teacher.css' %}">
+{% endblock head %}
 
-<form method="post">
+{% block content %}
 
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">ثبت اعلان</button>
+<div class="form-container">
+    <h1 class="form-title">ثبت اعلان جدید</h1>
 
-</form>
+    <form method="post" class="announcement-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button type="submit" class="submit-btn">ثبت اعلان</button>
+    </form>
+</div>
+
+{% endblock content %}

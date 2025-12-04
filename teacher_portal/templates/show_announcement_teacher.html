@@ -1,7 +1,19 @@
-{% for announcement in announcements %}
-    {{ announcement.title }}
-    <br>
-    {{ announcement.content }}
-    <br>
-    <hr>
-{% endfor %}
+{% extends 'parent/base.html' %}
+{% load static %}
+{% block title %} show announcement teacher {% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/show_announcement_teacher.css' %}">
+{% endblock head %}
+
+{% block content %}
+<div class="announcements-container">
+    <h1 class="announcements-title">اعلانات  {{ announcements.first.course.name }}</h1>
+
+    {% for announcement in announcements %}
+    <div class="announcement-card">
+        <h2 class="announcement-title">{{ announcement.title }}</h2>
+        <p class="announcement-content">{{ announcement.content }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}

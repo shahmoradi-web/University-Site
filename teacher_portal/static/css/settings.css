@@ -1,0 +1,50 @@
+:root {
+    --blue: #3A6DFF;
+    --purple: #8e44ad;
+    --gray-light: #f4f6f9;
+    --white: #fff;
+    --text-dark: #333;
+}
+
+.settings-container {
+    width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    font-family: "Vazir", sans-serif;
+}
+
+/* عنوان صفحه */
+.settings-title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: var(--purple);
+}
+
+/* لینک‌ها */
+.settings-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.setting-link {
+    display: block;
+    padding: 14px 0;
+    background: var(--blue);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.setting-link:hover {
+    background: var(--purple);
+    transform: translateY(-2px);
+}

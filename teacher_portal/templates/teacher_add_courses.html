@@ -1,6 +1,18 @@
+{% extends 'parent/base.html' %}
+{% load static %}
+{% block title %} teacher add courses {% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/teacher_add_courses.css' %}">
+{% endblock head %}
 
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">ثبت درس</button>
-</form>
+{% block content %}
+<div class="add-course-container">
+    <h2 class="add-course-title">افزودن درس جدید</h2>
+
+    <form method="post" class="add-course-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="submit-btn">ثبت درس</button>
+    </form>
+</div>
+{% endblock content %}
