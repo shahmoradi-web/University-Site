@@ -5,21 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61dd58c8-a63f-4f28-82bd-92ed2af90b61" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/teacher_portal/static/css/add_announcement_teacher.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/teacher_portal/static/css/dashboard_teacher.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/teacher_portal/static/css/edit_teacher_profile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/teacher_portal/static/css/settings.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/teacher_portal/static/css/show_announcement_teacher.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/teacher_portal/static/css/show_courses_teacher.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/teacher_portal/static/css/teacher_add_courses.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teacher_portal/templates/add_announcement_teacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/teacher_portal/templates/add_announcement_teacher.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teacher_portal/templates/dashboard_teacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/teacher_portal/templates/dashboard_teacher.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teacher_portal/templates/edit_teacher_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/teacher_portal/templates/edit_teacher_profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teacher_portal/templates/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/teacher_portal/templates/settings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teacher_portal/templates/show_announcement_teacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/teacher_portal/templates/show_announcement_teacher.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teacher_portal/templates/show_courses_teacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/teacher_portal/templates/show_courses_teacher.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teacher_portal/templates/teacher_add_courses.html" beforeDir="false" afterPath="$PROJECT_DIR$/teacher_portal/templates/teacher_add_courses.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +59,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\hp\Desktop\UniversitySite\teacher_portal\templates" />
       <recent name="C:\Users\hp\Desktop\UniversitySite\accounts\templates\registration" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hp\Desktop\UniversitySite\student_portal\static\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -243,7 +232,8 @@
       <workItem from="1764756934766" duration="139000" />
       <workItem from="1764757095641" duration="3410000" />
       <workItem from="1764768434126" duration="12827000" />
-      <workItem from="1764841443934" duration="4213000" />
+      <workItem from="1764841443934" duration="5022000" />
+      <workItem from="1765037739449" duration="301000" />
     </task>
     <servers />
   </component>
