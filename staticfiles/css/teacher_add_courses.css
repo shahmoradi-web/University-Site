@@ -1,0 +1,75 @@
+:root {
+    --purple: #8e44ad;
+    --blue: #3A6DFF;
+    --gray-light: #f4f6f9;
+    --white: #ffffff;
+    --text-dark: #333;
+}
+
+.add-course-container {
+    width: 90%;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 25px;
+    background: var(--white);
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    font-family: "Vazir", sans-serif;
+}
+
+.add-course-title {
+    text-align: center;
+    color: var(--purple);
+    font-size: 26px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.add-course-form p {
+    margin-bottom: 18px;
+}
+
+.add-course-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+.add-course-form input,
+.add-course-form select,
+.add-course-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: var(--gray-light);
+    font-size: 15px;
+}
+
+.add-course-form input:focus,
+.add-course-form select:focus,
+.add-course-form textarea:focus {
+    outline: none;
+    border-color: var(--purple);
+    box-shadow: 0 0 4px rgba(142,68,173,0.4);
+}
+
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: var(--blue);
+    color: white;
+    font-size: 17px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.submit-btn:hover {
+    background: var(--purple);
+}

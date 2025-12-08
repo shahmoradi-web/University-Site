@@ -1,0 +1,81 @@
+:root {
+    --blue: #3A6DFF;
+    --purple: #8e44ad;
+    --gray: #f4f6f9;
+    --white: #fff;
+    --text: #333;
+}
+
+
+.form-container {
+    width: 90%;
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 30px;
+    background: var(--white);
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    direction: rtl;
+}
+
+
+.form-title {
+    text-align: center;
+    color: var(--purple);
+    font-size: 26px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+
+.announcement-form p {
+    margin-bottom: 20px;
+}
+
+.announcement-form label {
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--blue);
+    margin-bottom: 6px;
+}
+
+
+.announcement-form input[type="text"],
+.announcement-form input[type="number"],
+.announcement-form textarea,
+.announcement-form select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: var(--gray);
+    font-size: 15px;
+    transition: all 0.3s;
+}
+
+.announcement-form input:focus,
+.announcement-form textarea:focus,
+.announcement-form select:focus {
+    border-color: var(--blue);
+    background: #eef2ff;
+    outline: none;
+}
+
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    background: var(--blue);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: var(--purple);
+}
