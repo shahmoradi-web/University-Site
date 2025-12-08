@@ -103,7 +103,7 @@ WSGI_APPLICATION = 'UniversitySite.wsgi.application'
 # }
 
 DEBUG = os.environ.get("DEBUG", "False") == "True"
-SECRET_KEY = os.environ.get("SECRET_KEY", "secret-key-project")
+SECRET_KEY = os.environ.get("SECRET_KEY", "secret_key_project")
 
 
 DATABASES = {
