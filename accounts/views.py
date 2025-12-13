@@ -1,6 +1,5 @@
 from http.client import HTTPResponse
 
-from Tools.scripts.make_ctype import method
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.password_validation import validate_password
 from django.shortcuts import render, redirect
