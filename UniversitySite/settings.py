@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'announcement.apps.AnnouncementConfig',
     'student_portal.apps.StudentPortalConfig',
     'teacher_portal.apps.TeacherPortalConfig',
-    'api.apps.ApiConfig'
+    'api.apps.ApiConfig',
+    'Home.apps.HomeConfig'
 ]
 
 MIDDLEWARE = [
