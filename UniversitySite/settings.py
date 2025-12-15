@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'student_portal.apps.StudentPortalConfig',
     'teacher_portal.apps.TeacherPortalConfig',
     'api.apps.ApiConfig',
-    'Home.apps.HomeConfig'
+    'home.apps.HomeConfig'
 ]
 
 MIDDLEWARE = [

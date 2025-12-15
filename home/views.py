@@ -7,4 +7,4 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return HttpResponse("این صفحه Home پروژه است!")
+    return HttpResponse("این صفحه home پروژه است!")
