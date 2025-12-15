@@ -107,7 +107,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "secret_key_project")
 
 
 DATABASES = {
-    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+    'default': dj_database_url.config(default=os.environ.get('DATABASE_PUBLIC_URL'))
 }
 
 
