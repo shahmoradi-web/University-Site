@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61dd58c8-a63f-4f28-82bd-92ed2af90b61" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/home/static/home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/header.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/templates/registration/login_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/registration/login_user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/partials/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/header.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +63,7 @@
       <recent name="C:\Users\hp\Desktop\UniversitySite\accounts\templates\registration" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hp\Desktop\UniversitySite\home\static\css" />
       <recent name="C:\Users\hp\Desktop\UniversitySite\student_portal\static\css" />
     </key>
   </component>
@@ -248,7 +248,7 @@
       <workItem from="1765795338814" duration="3932000" />
       <workItem from="1765872244963" duration="3594000" />
       <workItem from="1765877314274" duration="374000" />
-      <workItem from="1765902762832" duration="1527000" />
+      <workItem from="1765902762832" duration="3585000" />
     </task>
     <servers />
   </component>

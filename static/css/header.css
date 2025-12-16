@@ -1,0 +1,25 @@
+.site-header {
+    background: linear-gradient(135deg, #3A6DFF, #8e44ad);
+    padding: 25px 0;
+    text-align: center;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    direction: rtl;
+    font-family: "Vazir", sans-serif;
+}
+
+.site-icon {
+    font-size: 34px;
+}
+
+.site-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+}
