@@ -1,0 +1,76 @@
+:root {
+    --blue: #3A6DFF;
+    --purple: #8e44ad;
+    --light-gray: #f4f6f9;
+    --white: #ffffff;
+    --dark: #2c2c2c;
+}
+
+body {
+    background: linear-gradient(135deg, #eef2ff, #f9f9ff);
+}
+
+/* کانتینر اصلی */
+.home-container {
+    max-width: 900px;
+    margin: 80px auto;
+    text-align: center;
+    font-family: "Vazir", sans-serif;
+}
+
+/* عنوان */
+.home-title {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--purple);
+    margin-bottom: 10px;
+}
+
+/* زیرعنوان */
+.home-subtitle {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 50px;
+}
+
+/* کارت‌ها */
+.login-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* کارت ورود */
+.login-card {
+    width: 230px;
+    padding: 35px 20px;
+    border-radius: 18px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--white);
+    transition: 0.35s;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* کارت دانشجو */
+.login-card.student {
+    background: linear-gradient(135deg, #3A6DFF, #5f8dff);
+}
+
+/* کارت استاد */
+.login-card.teacher {
+    background: linear-gradient(135deg, #8e44ad, #b36ae2);
+}
+
+/* کارت کارمند */
+.login-card.staff {
+    background: linear-gradient(135deg, #5f6d7a, #8a99a8);
+}
+
+/* هاور */
+.login-card:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+}

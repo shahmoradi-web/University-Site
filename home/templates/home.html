@@ -1,5 +1,29 @@
+{% extends 'parent/base.html' %}
+{% load static %}
+{% block title %} صفحه اصلی {% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock head %}
 
+{% block content %}
 
-<h2><a href="{% url 'accounts:login_user' %}">ورود دانشجو</a></h2>
-<h2><a href="{% url 'accounts:login_user' %}">ورود استاد</a></h2>
-<h2><a href="{% url 'accounts:login_user' %}">ورود کارمند</a></h2>
+<div class="home-container">
+    <h1 class="home-title">سامانه آموزشی دانشگاه</h1>
+    <p class="home-subtitle">لطفاً نقش خود را برای ورود انتخاب کنید</p>
+
+    <div class="login-cards">
+        <a href="{% url 'accounts:login_user' %}" class="login-card student">
+            ورود دانشجو
+        </a>
+
+        <a href="{% url 'accounts:login_user' %}" class="login-card teacher">
+            ورود استاد
+        </a>
+
+        <a href="{% url 'accounts:login_user' %}" class="login-card staff">
+            ورود کارمند
+        </a>
+    </div>
+</div>
+
+{% endblock %}
