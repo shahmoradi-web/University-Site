@@ -1,0 +1,12 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/navigation.css' %}">
+
+<nav class="main-nav">
+    <ul class="nav-list">
+        <li><a href="{% url 'home:home' %}">خانه</a></li>
+        <li><a href="#">بلاگ</a></li>
+        <li class="nav-auth">
+            <a href="{% url 'accounts:login_user' %}">ورود</a>
+        </li>
+    </ul>
+</nav>

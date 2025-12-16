@@ -1,0 +1,56 @@
+.main-nav {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    font-family: "Vazirmatn", sans-serif;
+}
+
+.nav-list {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    list-style: none;
+
+    display: flex;
+    justify-content: center;   /* کنار هم و وسط */
+    align-items: center;
+    gap: 30px;                 /* فاصله استاندارد */
+    direction: rtl;
+}
+
+.nav-list li {
+    margin: 0;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #1f2937;
+    font-size: 17px;           /* فونت بزرگ‌تر */
+    font-weight: 500;
+    padding: 10px 18px;
+    border-radius: 10px;
+    transition: all 0.25s ease;
+}
+
+.nav-list a:hover {
+    background-color: #f3f4f6;
+    color: #3A6DFF;
+}
+
+/* لینک ورود متمایز ولی هم‌اندازه */
+.nav-auth a {
+    background-color: #8e44ad;
+    color: #ffffff;
+}
+
+.nav-auth a:hover {
+    background-color: #7d3c98;
+    color: #ffffff;
+}
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: row;   /* هنوز کنار هم */
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+}
+
