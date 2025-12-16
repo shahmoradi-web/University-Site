@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61dd58c8-a63f-4f28-82bd-92ed2af90b61" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/home/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +20,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Python Script" />
         <option value="HTML File" />
         <option value="CSS File" />
-        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -242,7 +244,8 @@
       <workItem from="1765641146387" duration="880000" />
       <workItem from="1765710012755" duration="2344000" />
       <workItem from="1765786221439" duration="2498000" />
-      <workItem from="1765795338814" duration="3039000" />
+      <workItem from="1765795338814" duration="3932000" />
+      <workItem from="1765872244963" duration="1863000" />
     </task>
     <servers />
   </component>
