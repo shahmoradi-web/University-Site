@@ -1,0 +1,39 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/footer.css' %}">
+
+<footer class="site-footer">
+    <div class="footer-container">
+
+        <div class="footer-section">
+            <h3>دانشگاه</h3>
+            <p>
+                سامانه جامع آموزشی دانشگاه<br>
+                ویژه دانشجویان، اساتید و کارکنان
+            </p>
+        </div>
+
+        <div class="footer-section">
+            <h3>دسترسی سریع</h3>
+            <ul>
+                <li><a href="{% url 'home:home' %}">صفحه اصلی</a></li>
+                <li><a href="#">بلاگ</a></li>
+                <li><a href="#">اطلاعیه‌ها</a></li>
+                <li><a href="#">تماس با ما</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>خدمات سامانه</h3>
+            <ul>
+                <li><a href="{% url 'accounts:login_user' %}">ورود دانشجویان</a></li>
+                <li><a href="{% url 'accounts:login_user' %}">ورود اساتید</a></li>
+                <li><a href="{% url 'accounts:login_user' %}">ورود کارکنان</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© تمامی حقوق محفوظ است – دانشگاه</p>
+    </div>
+</footer>
