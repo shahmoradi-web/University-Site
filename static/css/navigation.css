@@ -11,9 +11,9 @@
     list-style: none;
 
     display: flex;
-    justify-content: center;   /* کنار هم و وسط */
+    justify-content: center;
     align-items: center;
-    gap: 30px;                 /* فاصله استاندارد */
+    gap: 30px;
     direction: rtl;
 }
 
@@ -24,7 +24,7 @@
 .nav-list a {
     text-decoration: none;
     color: #1f2937;
-    font-size: 17px;           /* فونت بزرگ‌تر */
+    font-size: 17px;
     font-weight: 500;
     padding: 10px 18px;
     border-radius: 10px;
@@ -36,7 +36,6 @@
     color: #3A6DFF;
 }
 
-/* لینک ورود متمایز ولی هم‌اندازه */
 .nav-auth a {
     background-color: #8e44ad;
     color: #ffffff;
@@ -48,7 +47,7 @@
 }
 @media (max-width: 768px) {
     .nav-list {
-        flex-direction: row;   /* هنوز کنار هم */
+        flex-direction: row;
         flex-wrap: wrap;
         gap: 16px;
     }
