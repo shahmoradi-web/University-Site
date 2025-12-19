@@ -39,7 +39,8 @@ This project was built as an academic learning exercise to improve backend skill
 
 ## ☁️ Deployment
 
-- This project is deployed on Railway (Free Tier) — visit the live version to test it online.
+- This project is deployed on **Railway (Free Tier)**.  
+You can visit the live version here: [University Site Live](https://university-site-production-5b53.up.railway.app)
 ---
 
 ## 📈 What I Learned
