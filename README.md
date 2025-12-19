@@ -39,5 +39,51 @@ This project was built as an academic learning exercise to improve backend skill
 
 ## ☁️ Deployment
 
-- This project is deployed on Railway (Free Tier) — visit the live version to test it online. 
+- This project is deployed on Railway (Free Tier) — visit the live version to test it online.
+---
+
+## 📈 What I Learned
+
+- Django project structure
+- User authentication & permissions
+- Deployment basics
+
+---
+
+## 📌 Future Improvements
+
+- Improve UI/UX design
+- Add unit & integration tests
+- Dockerize the project fully
+- Add search & filters for courses
+
+---
+
+## 🚀 How to Run
+
+1. Clone the repo  
+   ```bash
+   git clone https://github.com/shahmoradi-web/Blog.git
+
+2. Create & activate virtual environment
+   ```bash
+   python -m venv venv
+   source venv/bin/activate   # On Windows: venv\Scripts\activate
+
+4. Install dependencies
+   ```bash
+   pip install -r requirements.txt
+
+6. Run migrations
+   ```bash
+   python manage.py migrate
+
+8. Create superuser (optional)
+   ```bash
+   python manage.py createsuperuser
+
+10. Start development server
+    ```bash
+      python manage.py runserver
+
 
