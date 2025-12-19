@@ -36,3 +36,8 @@ This project was built as an academic learning exercise to improve backend skill
 - **Deployment:** Railway (Free Tier)
 
 ---
+
+## ☁️ Deployment
+
+- This project is deployed on Railway (Free Tier) — visit the live version to test it online. 
+
