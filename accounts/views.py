@@ -2,10 +2,11 @@ from http.client import HTTPResponse
 
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.password_validation import validate_password
+from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 
 from accounts.forms import *
-
+from datetime import datetime
 from users.models import TeacherProfile
 # Create your views here.
 
@@ -107,6 +108,11 @@ def login_user(request):
             if user is not None:
 
                 login(request, user)
+                now = datetime.now()
+                subject = 'ورود به سایت آموزشی'
+                message = f'{now.strftime("%Y-%m-%d %H:%M:%S")}ورود به سایت آموزشی\n'
+                send_mail(subject, message, 'shahmoradinrges@gmail.com', ['venusshahmoradi3@gmail.com'])
+
                 if user.user_type == 'student':
                     return redirect('student_portal:dashboard')
                 elif user.user_type == 'teacher':
