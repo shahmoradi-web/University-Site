@@ -17,6 +17,7 @@ def dashboard(request):
     user = CustomUser.objects.get(id=request.user.id)
     user_st = StudentProfile.objects.get(user=user)
     context ={
+        'student':user_st,
         'first_name': user.first_name,
         'last_name': user.last_name,
         'department': user.department,

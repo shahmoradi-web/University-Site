@@ -13,6 +13,13 @@
 
     <div class="student-info card">
         <h3>اطلاعات دانشجو</h3>
+
+        {% if student.photo %}
+            <img src="{{ student.photo.url }}">
+        {% else %}
+            <img src={% static 'images/profile/unknown/download.png'%}>
+        {% endif %}
+        
         <p><strong>نام:</strong> {{ first_name }}</p>
         <p><strong>نام خانوادگی:</strong> {{ last_name }}</p>
         <p><strong>دپارتمان:</strong> {{ department }}</p>

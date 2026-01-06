@@ -7,6 +7,7 @@ from courses.models import Course
 
 class StudentProfile(models.Model):
     user = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
+    photo = models.ImageField(upload_to='images/student/',null=True, blank=True)
     student_id = models.IntegerField(unique=True, null=True, blank=True)
     father_name = models.CharField(max_length=100)
     faculty = models.CharField(max_length=100)
@@ -20,6 +21,7 @@ class StudentProfile(models.Model):
 
 class TeacherProfile(models.Model):
     user = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
+    photo = models.ImageField(upload_to='images/teacher/',null=True, blank=True)
     teacher_code = models.IntegerField(unique=True,null=True, blank=True)
     courses = models.ManyToManyField(Course,null=True, blank=True)
     def __str__(self):
