@@ -1,31 +1,10 @@
-"""
-Django settings for UniversitySite project.
-LOCAL DEVELOPMENT SETTINGS
-"""
-
 from pathlib import Path
+from dotenv import load_dotenv
+load_dotenv()
 
-# ======================
-# BASE DIR
-# ======================
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-
-
-# ======================
-# SECURITY (LOCAL)
-# ======================
-
-SECRET_KEY = 'django-insecure-local-dev-key'
-
-DEBUG = True
-
-ALLOWED_HOSTS = []
-
-
-# ======================
-# APPLICATIONS
-# ======================
+SECRET_KEY = 'django-insecure-change-this-later'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -45,11 +24,6 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
 ]
 
-
-# ======================
-# MIDDLEWARE (DEFAULT)
-# ======================
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -59,11 +33,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
-
-# ======================
-# URLS / TEMPLATES
-# ======================
 
 ROOT_URLCONF = 'UniversitySite.urls'
 
@@ -84,64 +53,22 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'UniversitySite.wsgi.application'
 
-
-# ======================
-# DATABASE (SQLite - LOCAL)
-# ======================
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
-
-# ======================
-# AUTH
-# ======================
-
 AUTH_USER_MODEL = 'accounts.CustomUser'
-
-AUTH_PASSWORD_VALIDATORS = [
-    {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
-    {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},
-    {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator'},
-    {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
-]
-
-
-# ======================
-# I18N
-# ======================
 
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
-
-# ======================
-# STATIC & MEDIA (LOCAL)
-# ======================
-
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / 'static']
-
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'images'
-
-
-# ======================
-# DEFAULT PK
-# ======================
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# ======================
+import os
 
-# EMAIL CONFIG
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-# ======================
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
-
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
