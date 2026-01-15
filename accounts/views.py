@@ -111,7 +111,7 @@ def login_user(request):
                 now = datetime.now()
                 subject = 'ورود به سایت آموزشی'
                 message = f'{now.strftime("%Y-%m-%d %H:%M:%S")}ورود به سایت آموزشی\n'
-                send_mail(subject, message, 'shahmoradinrges@gmail.com', ['venusshahmoradi3@gmail.com'])
+                send_mail(subject, message, 'shahmoradinrges@gmail.com', [user.email])
 
                 if user.user_type == 'student':
                     return redirect('student_portal:dashboard')
