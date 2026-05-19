@@ -31,6 +31,7 @@ urlpatterns = [
     path('student/',include(('student_portal.urls','student_portal'), namespace='student')),
     path('teacher/',include(('teacher_portal.urls', 'teacher_portal'), namespace='teacher')),
     path('api/',include(('api.urls', 'api'), namespace='api')),
+    path('academics/',include(('academics.urls', 'api'), namespace='academics')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -12,6 +12,7 @@ class Course(models.Model):
     capacity = models.IntegerField(default=0)
     register= models.IntegerField(default=0)
 
+
     def __str__(self):
         return self.name
 

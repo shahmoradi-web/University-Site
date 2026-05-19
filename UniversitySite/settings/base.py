@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     'teacher_portal.apps.TeacherPortalConfig',
     'api.apps.ApiConfig',
     'home.apps.HomeConfig',
+    'academics.apps.AcademicsConfig',
 ]
 
 MIDDLEWARE = [
