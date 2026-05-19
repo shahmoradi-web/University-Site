@@ -77,3 +77,4 @@ def add_announcement(request, course_id):
 def show_announcement(request, course_id):
     announcements = Announcement.objects.filter(course=course_id)
     return render(request,'show_announcement_teacher.html',{'announcements':announcements})
+

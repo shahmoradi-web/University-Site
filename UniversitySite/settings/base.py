@@ -35,6 +35,15 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+AUTH_PASSWORD_VALIDATORS = [
+    {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator', 'OPTIONS': {'min_length': 8}},
+    {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
+]
+
+
+
 ROOT_URLCONF = 'UniversitySite.urls'
 
 TEMPLATES = [
@@ -55,6 +64,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'UniversitySite.wsgi.application'
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
+
 
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'

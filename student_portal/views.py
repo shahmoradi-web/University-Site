@@ -46,25 +46,6 @@ def edit_student_profile(request):
         form = EditStudentProfileForm(instance=request.user)
     return render(request, 'edit_student_profile.html', {'form': form})
 
-@login_required
-def student_add_courses(request):
-    student = StudentProfile.objects.get(user = request.user)
-    if request.method == 'POST':
-        form = CourseSelectForm(request.POST)
-        if form.is_valid():
-            select_courses = form.cleaned_data['courses']
-            student.courses.add(*select_courses)
-            for course in select_courses:
-                Enrollment.objects.create(course = course, user = request.user,teacher = course.teacher)
-            return redirect('student_portal:dashboard')
-    else:
-        form = CourseSelectForm()
-    return render(request, 'student_add_courses.html', {'form': form})
-
-@login_required
-def show_student_courses(request):
-    student = StudentProfile.objects.get(user = request.user)
-    return render(request, 'show_student_courses.html', {'student': student})
 
 @login_required
 def show_announcement(request):
@@ -72,4 +53,50 @@ def show_announcement(request):
     announcements = Announcement.objects.filter(course_id__in=course_ids)
     return render(request,'show_announcement_student.html', {'announcements': announcements})
 
+
+@login_required
+def show_all_courses(request):
+    courses = Course.objects.all()
+    return render(request,'show_all_courses.html',{'courses':courses})
+
+@login_required
+def take_courses(request):
+    student = StudentProfile.objects.get(user=request.user)
+    courses = request.POST.getlist('courses')
+
+    for obj in courses:
+        course = Course.objects.get(id=int(obj))
+        if course.capacity != course.register:
+            student.courses.add(course)
+
+    return redirect('student_portal:show_student_courses')
+
+
+@login_required
+def show_student_courses(request):
+    student = StudentProfile.objects.get(user=request.user)
+    return render(request, 'show_student_courses.html', {'courses': student.courses.all()})
+
+
+@login_required
+def save_enrollment(request):
+    student = StudentProfile.objects.get(user=request.user)
+    courses = student.courses.all()
+    for course in courses:
+        if not (Enrollment.objects.filter(course__id=course.id).exists()):
+            Enrollment.objects.create(user=request.user, course=course, teacher=course.teacher)
+    messages.success(request, 'ثبت نهایی انجام شد', )
+
+    return render(request, 'show_student_courses.html',{'courses':courses})
+
+
+@login_required
+def edit_courses(request):
+    student = StudentProfile.objects.get(user=request.user)
+    if request.method == 'POST':
+        delete_courses = request.POST.getlist('courses')
+        student.courses.remove(*delete_courses)
+        return redirect('student_portal:show_student_courses')
+
+    return render(request, 'edit_courses.html',{'courses':student.courses.all()})
 

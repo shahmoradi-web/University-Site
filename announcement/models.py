@@ -13,6 +13,7 @@ class Announcement(models.Model):
         ('all', 'All')
     ]
     title = models.CharField(max_length=100)
+    teacher = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='announcements', null=True, blank=True)
     content = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

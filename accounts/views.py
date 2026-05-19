@@ -13,29 +13,27 @@ from users.models import TeacherProfile
 def home(request):
     pass
 
+from django.contrib.auth.password_validation import validate_password
+from django.core.exceptions import ValidationError
+from django.shortcuts import render, redirect
+
+
 def register_students(request):
-    student = True
     if request.method == 'POST':
         user_form = UserRegisterForm(request.POST)
         student_form = StudentRegisterForm(request.POST)
 
         if user_form.is_valid() and student_form.is_valid():
             user = user_form.save(commit=False)
-
             password = user_form.cleaned_data['password1']
-            try:
-                validate_password(password, user)  # validate weak password
-            except ValidationError as e:
-                user_form.add_error('password1', e)
 
-            if user_form.is_valid():
-                user.user_type = 'student'
-                user.set_password(password)
-                user.save()
-                student = student_form.save(commit=False)
-                student.user = user
-                student.save()
-                return redirect('accounts:login_user')
+            user.user_type = 'student'
+            user.set_password(password)
+            user.save()
+            student = student_form.save(commit=False)
+            student.user = user
+            student.save()
+            return redirect('accounts:login_user')
 
     else:
         user_form = UserRegisterForm()
@@ -46,8 +44,10 @@ def register_students(request):
         'registration/register.html',
         {'user_form': user_form,
          'student_form': student_form,
-         'student': student}
+         'student': True}
     )
+
+
 
 def register_teachers(request):
     teacher = True

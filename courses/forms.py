@@ -15,3 +15,4 @@ class CourseSelectForm(forms.Form):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['courses'].label_from_instance = lambda obj: f"{obj.name}  {obj.teacher.first_name} {obj.teacher.last_name}  {obj.term}  {obj.credit}"
+

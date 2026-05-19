@@ -18,10 +18,6 @@ class TestUrls(TestCase):
         url = reverse('student_portal:edit_student_profile')
         self.assertEqual(resolve(url).func, edit_student_profile)
 
-    def test_student_add_courses_urls(self):
-        url = reverse('student_portal:student_add_courses')
-        self.assertEqual(resolve(url).func, student_add_courses)
-
     def test_show_student_courses_urls(self):
         url = reverse('student_portal:show_student_courses')
         self.assertEqual(resolve(url).func, show_student_courses)
@@ -30,4 +26,18 @@ class TestUrls(TestCase):
         url = reverse('student_portal:show_announcement')
         self.assertEqual(resolve(url).func, show_announcement)
 
+    def test_show_all_courses_urls(self):
+        url = reverse('student_portal:show_all_courses')
+        self.assertEqual(resolve(url).func, show_all_courses)
 
+    def test_take_courses_urls(self):
+        url = reverse('student_portal:take_courses')
+        self.assertEqual(resolve(url).func, take_courses)
+
+    def test_save_enrollment_urls(self):
+        url = reverse('student_portal:save_enrollment')
+        self.assertEqual(resolve(url).func, save_enrollment)
+
+    def test_edit_courses_urls(self):
+        url = reverse('student_portal:edit_courses')
+        self.assertEqual(resolve(url).func, edit_courses)

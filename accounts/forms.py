@@ -1,3 +1,4 @@
+from django.contrib.auth.forms import UserCreationForm
 from django.core.exceptions import ValidationError
 from django.forms import ModelForm
 from .models import *
@@ -6,25 +7,14 @@ from users.models import StudentProfile
 from accounts.models import CustomUser
 
 
+from django import forms
+from django.contrib.auth.forms import UserCreationForm
+from .models import CustomUser
 
-class UserRegisterForm(ModelForm):
-    password1 = forms.CharField(label='password',widget=forms.PasswordInput)
-    password2 = forms.CharField(label='repeat password',widget=forms.PasswordInput)
-    class Meta:
+class UserRegisterForm(UserCreationForm):
+    class Meta(UserCreationForm.Meta):
         model = CustomUser
-        fields = ['username','first_name','last_name','email','department']
-
-    def clean_password2(self):
-        cd = self.cleaned_data
-        if cd['password1'] != cd['password2']:
-            raise ValidationError("Passwords don't match")
-        return cd['password2']
-
-    def clean_email(self):
-        cd = self.cleaned_data
-        if CustomUser.objects.filter(email=cd['email']).exists():
-            raise ValidationError("Email already registered")
-        return cd['email']
+        fields = ['username', 'first_name', 'last_name', 'email', 'department', 'password1', 'password2']
 
 
 class StudentRegisterForm(ModelForm):

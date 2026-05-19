@@ -2,7 +2,7 @@
 {% load static %}
 {% block title %} انتخاب واحد {% endblock %}
 {% block head %}
-<link rel="stylesheet" href="{% static 'css/save_enrollment.css' %}">
+<link rel="stylesheet" href="{% static 'css/edit_courses.css' %}">
 {% endblock head %}
 
 {% block content %}
@@ -16,6 +16,7 @@
         <table class="course-table">
             <thead>
                 <tr>
+                    <th>انتخاب</th>
                     <th>نام درس</th>
                     <th>استاد</th>
                     <th>ترم</th>
@@ -23,8 +24,11 @@
                 </tr>
             </thead>
             <tbody>
-                {% for course in courses.all %}
+                {% for course in courses %}
                 <tr>
+                    <td>
+                        <input type="checkbox" name="courses" value="{{ course.id }}" id="course_{{ course.id }}">
+                    </td>
                     <td><label for="course_{{ course.id }}">{{ course.name }}</label></td>
                     <td>{{ course.teacher.first_name }} {{ course.teacher.last_name }}</td>
                     <td>{{ course.term }}</td>
@@ -33,11 +37,11 @@
                 {% endfor %}
             </tbody>
         </table>
-        <a href="{% url 'student_portal:save_enrollment' %}">ثبت نهایی</a>
-        <a href="{% url 'student_portal:edit_courses' %}">ویرایش</a>
-        <a href="{% url 'student_portal:show_all_courses' %}">انتخاب واحد</a>
+
+        <button type="submit" class="submit-btn">حذف</button>
     </form>
 </div>
+
 
 
 {% endblock content %}
