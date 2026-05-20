@@ -1,5 +1,7 @@
 
 from django.db import models
+
+from academics.models import Major
 from accounts.models import CustomUser
 # Create your models here.
 
@@ -11,7 +13,7 @@ class Course(models.Model):
     credit = models.IntegerField(default=3)
     capacity = models.IntegerField(default=0)
     register= models.IntegerField(default=0)
-
+    major = models.ForeignKey(Major, on_delete=models.CASCADE ,related_name='courses', null=True, blank=True)
 
     def __str__(self):
         return self.name
